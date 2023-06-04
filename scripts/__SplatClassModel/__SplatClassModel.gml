@@ -1,4 +1,4 @@
-function __SplatClassModel(_texture) constructor
+function __SplatClassModel() constructor
 {
     __SPLAT_GLOBAL
     static __texture      = _global.__texture;

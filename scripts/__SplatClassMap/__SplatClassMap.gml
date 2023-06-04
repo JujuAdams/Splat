@@ -71,6 +71,10 @@ function __SplatClassMap(_x, _y, _width, _height) constructor
         }
     }
     
+    /// @param left
+    /// @param top
+    /// @param right
+    /// @param bottom
     static Draw = function(_pixelLeft, _pixelTop, _pixelRight, _pixelBottom)
     {
         if (__destroyed) return;

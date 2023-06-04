@@ -1,3 +1,11 @@
+/// Adds a sprite to the oldest splatmap that exists
+/// 
+/// This function is provided for convenience; to add a sprite to a particular splatmap, please
+/// use the .SplatExt() method on that splatmap (see SplatMap())
+/// 
+/// Any sprite that you want to add to a splatmap should be tagged with "splat" in the GameMaker IDE
+/// All sprites that you want to add to a splatmap must be on the same texture page
+/// 
 /// @param sprite
 /// @param image
 /// @param x
