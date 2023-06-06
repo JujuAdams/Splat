@@ -11,3 +11,11 @@
 //Choose a higher number for more overlapping sprites, choose a smaller number for
 //better performance
 #macro SPLAT_MAX_SPRITE_COUNT  25
+
+//All sprites drawn to a splatmap must be tagged with "splat" in the IDE
+//When running from the IDE, you'll receive error messages when trying to use an untagged sprite
+//with a splatmap, but when running from an executable (i.e. in production) then these errors won't
+//occur (and instead the operation will silently fail). This might be inconvenient when working
+//with a QA team, so this macro exists to force errors to help iron out any, otherwise silent,
+//problems
+#macro SPLAT_FORCE_MISSING_TAG_ERROR  false

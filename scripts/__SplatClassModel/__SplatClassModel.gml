@@ -4,6 +4,7 @@ function __SplatClassModel() constructor
     static __texture      = _global.__texture;
     static __vertexFormat = _global.__vertexFormat;
     static __imageDataMap = _global.__imageDataMap;
+    static __releaseMode  = _global.__releaseMode;
     
     __destroyed = false;
     __dirty = false;
@@ -41,6 +42,8 @@ function __SplatClassModel() constructor
     
     static __Draw = function()
     {
+        if (__spriteCount <= 0) return;
+        
         if (__dirty)
         {
             __dirty = false;
@@ -55,7 +58,11 @@ function __SplatClassModel() constructor
     static __Splat = function(_sprite, _image, _x, _y, _xScale, _yScale, _angle, _colour, _alpha)
     {
         var _imageData = __imageDataMap[? __SPLAT_MAX_IMAGES*_sprite + _image];
-        if (_imageData == undefined) __SplatError(sprite_get_name(_sprite), " not tagged with \"splat\" in the IDE");
+        if (_imageData == undefined)
+        {
+            if (__releaseMode || SPLAT_FORCE_MISSING_TAG_ERROR) __SplatError(sprite_get_name(_sprite), " not tagged with \"splat\" in the IDE");
+            return;
+        }
         
         var _rgba = (_colour & 0xFFFFFF) | ((0xFF*_alpha) << 24)
         
@@ -86,8 +93,7 @@ function __SplatClassModel() constructor
         
         var _buffer = __buffer;
         
-        __spriteCount = (__spriteCount + 1) mod SPLAT_MAX_SPRITE_COUNT;
-        buffer_seek(_buffer, buffer_seek_start, __spriteCount*__SPLAT_SPRITE_BYTE_SIZE);
+        buffer_seek(_buffer, buffer_seek_start, (__spriteCount mod SPLAT_MAX_SPRITE_COUNT)*__SPLAT_SPRITE_BYTE_SIZE);
         
         buffer_write(_buffer, buffer_f32, _ltX); buffer_write(_buffer, buffer_f32, _ltY); buffer_seek(_buffer, buffer_seek_relative, 4); buffer_write(_buffer, buffer_u32, _rgba); buffer_write(_buffer, buffer_f32, _u0); buffer_write(_buffer, buffer_f32, _v0);
         buffer_write(_buffer, buffer_f32, _lbX); buffer_write(_buffer, buffer_f32, _lbY); buffer_seek(_buffer, buffer_seek_relative, 4); buffer_write(_buffer, buffer_u32, _rgba); buffer_write(_buffer, buffer_f32, _u0); buffer_write(_buffer, buffer_f32, _v1);
@@ -97,6 +103,7 @@ function __SplatClassModel() constructor
         buffer_write(_buffer, buffer_f32, _lbX); buffer_write(_buffer, buffer_f32, _lbY); buffer_seek(_buffer, buffer_seek_relative, 4); buffer_write(_buffer, buffer_u32, _rgba); buffer_write(_buffer, buffer_f32, _u0); buffer_write(_buffer, buffer_f32, _v1);
         buffer_write(_buffer, buffer_f32, _rbX); buffer_write(_buffer, buffer_f32, _rbY); buffer_seek(_buffer, buffer_seek_relative, 4); buffer_write(_buffer, buffer_u32, _rgba); buffer_write(_buffer, buffer_f32, _u1); buffer_write(_buffer, buffer_f32, _v1);
         
+        __spriteCount++;
         __dirty = true;
     }
 }
