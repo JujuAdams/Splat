@@ -1,6 +1,6 @@
 <h1 align="center">Splat 1.0.0</h1>
 
-<p align="center">Sprite caching for GameMaker Studio 2022 LTS by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a></p>
+<p align="center">Vertex buffer-based sprite caching for GameMaker Studio 2022 LTS by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a></p>
 
 &nbsp;
 
