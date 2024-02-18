@@ -7,5 +7,4 @@
 &nbsp;
 
 - ### [Download the .yymps](https://github.com/JujuAdams/splat/releases/)
-- ### Talk about Splat on the [Discord server](https://discord.gg/e9wrvnCWkK)
 - ### You may also like [Stickers](https://github.com/tabularelf/Stickers)
