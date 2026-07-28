@@ -3,8 +3,8 @@
 #macro __SPLAT_SPRITE_BYTE_SIZE  144
 #macro __SPLAT_MAX_IMAGES        1024
 
-#macro __SPLAT_VERSION  "1.0.0"
-#macro __SPLAT_DATE     "2023-06-04"
+#macro __SPLAT_VERSION  "2.0.0"
+#macro __SPLAT_DATE     "2026-07-28"
 
 __SplatInitialize();
 
@@ -14,7 +14,7 @@ function __SplatInitialize()
     if (_initialized) return;
     _initialized = true;
     
-    __SplatTrace("Welcome to Splat by @jujuadams! This is version " + __SPLAT_VERSION + ", " + __SPLAT_DATE);
+    __SplatTrace("Welcome to Splat by Juju Adams! This is version " + __SPLAT_VERSION + ", " + __SPLAT_DATE);
     
     var _global = __SplatGlobal();
     
