@@ -1,0 +1,16 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"oTest","order":5,"path":"objects/oTest/oTest.yy",},
+    {"name":"__SplatClassMap","order":4,"path":"scripts/__SplatClassMap/__SplatClassMap.yy",},
+    {"name":"__SplatClassModel","order":5,"path":"scripts/__SplatClassModel/__SplatClassModel.yy",},
+    {"name":"__SplatError","order":3,"path":"scripts/__SplatError/__SplatError.yy",},
+    {"name":"__SplatInitialize","order":1,"path":"scripts/__SplatInitialize/__SplatInitialize.yy",},
+    {"name":"__SplatTrace","order":2,"path":"scripts/__SplatTrace/__SplatTrace.yy",},
+    {"name":"Splat","order":1,"path":"scripts/Splat/Splat.yy",},
+    {"name":"SplatMap","order":2,"path":"scripts/SplatMap/SplatMap.yy",},
+    {"name":"sprTestA","order":2,"path":"sprites/sprTestA/sprTestA.yy",},
+    {"name":"sprTestB","order":3,"path":"sprites/sprTestB/sprTestB.yy",},
+    {"name":"sprTestInvalid","order":4,"path":"sprites/sprTestInvalid/sprTestInvalid.yy",},
+  ],
+}

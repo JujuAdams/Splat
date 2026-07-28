@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__SplatClassMap",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "(System)",
-    "path": "folders/Splat/(System).yy",
+  "$GMScript":"v1",
+  "%Name":"__SplatClassMap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__SplatClassMap",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Splat/(System).yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
