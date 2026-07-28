@@ -57,7 +57,7 @@ function __SplatClassModel() constructor
     
     static __Splat = function(_sprite, _image, _x, _y, _xScale, _yScale, _angle, _colour, _alpha)
     {
-        var _imageData = __imageDataMap[? __SPLAT_MAX_IMAGES*_sprite + _image];
+        var _imageData = __imageDataMap[? __SPLAT_MAX_IMAGES*real(_sprite) + _image];
         if (_imageData == undefined)
         {
             if (__releaseMode || SPLAT_FORCE_MISSING_TAG_ERROR) __SplatError(sprite_get_name(_sprite), " not tagged with \"splat\" in the IDE");

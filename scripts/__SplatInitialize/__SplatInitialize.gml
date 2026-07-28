@@ -63,7 +63,7 @@ function __SplatInitialize()
                     var _right  = _left + _uvs[6]*sprite_get_width(_sprite);
                     var _bottom = _top + _uvs[7]*sprite_get_height(_sprite);
                     
-                    _imageDataMap[? __SPLAT_MAX_IMAGES*_sprite + _image] = {
+                    _imageDataMap[? __SPLAT_MAX_IMAGES*real(_sprite) + _image] = {
                         __left:   _left,
                         __top:    _top,
                         __right:  _right,
